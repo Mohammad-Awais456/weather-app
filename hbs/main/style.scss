@@ -1,0 +1,397 @@
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+     
+
+}
+// html,body{
+       
+   
+// }
+body,html{
+    height: 100%;
+
+}
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
+@mixin flex_center_c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+@mixin flex_custom($j,$a,$dr,$wr) {
+    display: flex;
+    justify-content: $j;
+    align-items: $a;
+    flex-direction: $dr;
+    flex-wrap: $wr;
+    
+}
+
+@mixin btn($size,$tb,$lr) {
+    width: auto;
+    height: auto;
+    font-size: $size+px;
+    color: black;
+    padding: $tb+px $lr+px;
+   
+}
+
+@mixin bf($back) 
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: $back;
+}
+@mixin bf_cus($t,$l,$w,$h,$back) 
+{
+    content: "";
+    width: $w;
+    height: $h;
+    position: absolute;
+    top: $t;
+    left: $l;
+    background-color: $back;
+}
+
+$u:10px;
+
+::-ms-clear {
+    display: none;
+ }
+ 
+/* scroll bar  */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.863);
+    cursor: pointer !important;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+  }
+  
+  /* scroll bar  */
+// ....................................................................
+.navbar_main{
+
+    
+    ul a{
+         color: blanchedalmond;
+font-size: 1.8*$u;
+     }
+}
+#nav_logo{
+    color: rgb(255, 255, 255);
+}
+
+.main-nav-div{
+    background-color: rgba(0, 0, 0, 0.918);
+}
+
+.nav_a{
+    transition: all 0.5s;
+margin: 0px 5px;
+    position: relative;
+    &::before
+    {
+        transition: all 0.5s;
+
+@include bf_cus(100%, 50%, 80%, 5%, white);
+        opacity: 0;
+
+transform: translateX(-50%);
+    }
+
+
+    &:hover.nav_a::before{
+        opacity: 1 !important;
+    }
+}
+
+
+#btn{
+    align-self: flex-start;
+    @include btn(15,5,15);
+
+margin-top: 15px; 
+   box-shadow: 1px 5px 6px black;
+border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+
+.homeheading span{
+    color: skyblue;
+
+}
+.homeheading{
+    font-size: 2*$u;
+    color: #3a3a3a;
+}
+#h6heading
+{
+    margin-bottom: 12px;
+    color: gray;
+    font-size: 1.3*$u;
+}
+.caraouselimg{
+    height: 421px !important;
+}
+#header{
+    margin-top: 5*$u;
+}
+
+#footer{
+    position: relative;
+}
+#footer h3{
+    font-size: 1.4*$u;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+#footer h6{
+    position: absolute;
+    font-size: 10px;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    color: #969696;
+}
+#headingcolunm{
+    margin-bottom: 148px;
+}
+
+
+@media only screen and(min-width:0px) and(max-width:260px){
+#currenttemp{
+    font-size: 25px;
+}
+}
+@media only screen and(min-width:340px) and(max-width:691px){
+
+    #weather_icon {
+        font-size: 90px !important;
+            }
+}
+
+@media only screen and(min-width:0px) and(max-width:339px){
+
+    #weather_icon {
+        font-size: 50px !important;
+            }
+}
+@media only screen and(min-width:500px) and(max-width:991px){
+    .caraouselimg{
+
+        margin: auto;
+width: 80% !important;
+    }
+   
+  
+
+
+}
+@media only screen and (min-width:0px) and (max-width:991px){
+
+    #headingcolunm{
+        margin-bottom: 0px !important;
+    }
+}
+@media only screen and (min-width:250px) and (max-width:500px){
+    .caraouselimg{
+        height: 333px !important;
+    }
+  
+    }
+
+@media only screen and (min-width:0px) and (max-width:249px){
+    .caraouselimg{
+        height: 200px !important;
+    }
+    
+}
+
+
+// .........................weather css................... 
+#search_main{
+    width: 100%;
+}
+#search_main form{
+    width: 100%;
+    @include flex_custom(center,center ,column ,nowrap );
+}
+#searchfield{
+    outline: none;
+    box-shadow: none;
+    padding: 10px 25px;
+    font-size: 20px;
+    border: none;
+    background: #151515;
+    border-radius: 50px;
+    color: white;
+}
+#search_button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 11%;
+    outline: none;
+    background: none;
+    border: none;
+}
+
+#result_main{
+    @include flex_center();
+}
+
+#result_inner{
+    background: #151515;
+    border-radius: 10px;
+    padding: 0px !important;
+}
+.timedate{
+    background: #0e0d0d;
+
+}
+#weather_icon{
+    font-size: 100px;
+}
+.weatherinfo{
+    position: relative;
+    width: 100%;
+    color: white;
+    margin: 0px;
+}
+#day,#date{
+    color: white;
+    margin: 0px;
+    font-size: 18px;
+}
+
+
+@media only screen  and (max-width:575px){
+    #aboutimg{
+        display: none !important;
+    }
+    #aboutusimg{
+        
+        display: block !important;
+    }
+}
+@media only screen and (min-width:194px) and (max-width:260px){
+
+    #search_button{
+
+    right: 14%;
+
+    }
+}
+@media only screen and (min-width:0px) and (max-width:193px){
+    
+    #search_button{
+
+        right: 20%;
+        
+    }
+}
+@media only screen and  (max-width:599px){
+    #footer h6{
+        display: none !important;
+    }
+}
+#btn2{
+    align-self: flex-start;
+    @include btn(15,5,15);
+    
+    margin-top: 15px; 
+    box-shadow: 1px 5px 6px black;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+#btn2,#btn{
+    position: relative;
+}
+
+#btn2::after,#btn::after{
+    content:"";
+    position: absolute;
+width: 100%;
+height: 0%;
+background-color: #0000001a;
+top: 0%;
+left: 0%;
+border-radius: 10px;
+opacity: 0;
+transition: 0.5s;
+}
+
+// #btn{
+
+
+//     &:hover#btn::after{
+
+//         height: 100%;
+//     }
+// }
+
+#btn2{
+
+
+    &:hover#btn2::after{
+        opacity: 1;
+
+        height: 100%;
+    }
+}
+#btn{
+
+
+    &:hover#btn::after{
+        opacity: 1;
+
+        height: 100%;
+    }
+}
+
+
+// #btn2:hover,#btn:hover
+// {
+
+// }

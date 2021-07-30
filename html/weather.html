@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <!-- .............................navbar starting.................  -->
+  <div class="container-fluid main-nav-div">
+
+    <div class="row">
+
+      <div class="col-md-10 col-12 mx-auto">
+
+        <nav class="navbar navbar-expand-lg navbar_main">
+          <a class="navbar-brand" id="nav_logo" href="#">Weather</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <i class="far fa-bars text-light" style="font-size: 23px;"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="align-items-center navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link nav_a" href="/index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_a" href="/about.html">Weather</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_a" href="/about.html">About</a>
+              </li>
+
+            </ul>
+          </div>
+        </nav>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ...............navbar ending.............  -->
+<!-- .......................header starting...........  -->
+
+<div class="container-fluid mx-0 mt-5" id="search_main">
+
+
+
+ <form action="#">
+
+
+    <div class="row w-100  d-flex justify-content-center align-items-center " >
+<div class="col-md-7 col-lg-4 col-12" style="position: relative;">
+
+
+    <input class="w-100" type="search" placeholder="Enter City name" id="searchfield">
+    <button id="search_button">
+        <i style="    color: white;" class="fas fa-search"> </i>
+    </button>
+</div>
+        
+    </div>
+
+ </form>
+
+ <div class="row mx-0 my-4 p-0" id="result_main">
+
+
+<div id="result_inner" class="col-md-7 col-lg-5 col-xl-4 col-sm-10 col-12 ">
+
+    <div class="timedate py-1 row my-0 mx-0 ">
+<div class="d-flex  pl-2 py-2  align-items-center  col-6">
+    
+    <h2 id="day">Tuesday</h2>
+</div>
+<div class="col-6  pr-2 py-2 d-flex justify-content-end align-items-center">
+    <h5 id="date">12,232/2321</h5>
+</div>
+
+
+    </div>
+
+
+
+    <div class=" py-3 row weatherinfo">
+
+
+<div id="locationdiv" class="pl-2 col-12">
+
+    <h4 id="cityname">
+        lahore,<span id="countryname">pak</span>
+    </h4>
+</div>
+
+
+<div class="pl-2 col-5 d-flex justify-content-start align-items-center" id="temp_main">
+    <h1>22 c</h1>
+</div>
+<div class="d-flex justify-content-end align-items-center col-7">
+    <i id="weather_icon" class="fas fa-cloud ">
+
+    </i>
+</div>
+    
+
+    </div>
+
+
+</div>
+
+ </div>
+
+
+
+</div>
+<!-- .......................header ending...........  -->
+
+
+
+<!-- footer is starting here  -->
+
+<footer id="footer" class="d-flex justify-content-center align-items-center flex-column mt-auto " style=" padding: 17px 0px;   background-color: #151515!important;">
+
+  <h3>CopyRight© reserved 2021</h3>
+<h6>Created by: Mohammad Awais</h6>
+
+</footer>
+
+<!-- footer is ending here  -->
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="./javascript.js"></script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
