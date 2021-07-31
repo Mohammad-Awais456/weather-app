@@ -3,7 +3,7 @@ const app = express();
 const fs=require("fs");
 const path=require("path");
 const hbs=require("hbs");
-
+const port = process.env.port || 8000;
 // absolute paths 
 
 let staticpath=path.join(__dirname,"./hbs/main");
@@ -43,6 +43,6 @@ app.get("/weather",(req,res)=>{
 
 
 
-app.listen(8000,(err)=>{
+app.listen(port,(err)=>{
 console.log("listeng at port no 8000");
 });
