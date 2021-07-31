@@ -3,7 +3,7 @@ const app = express();
 const fs=require("fs");
 const path=require("path");
 const hbs=require("hbs");
-const port = process.env.port || 8000;
+const port = process.env.PORT || 8000;
 // absolute paths 
 
 let staticpath=path.join(__dirname,"./hbs/main");
